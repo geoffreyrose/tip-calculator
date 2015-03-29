@@ -62,10 +62,7 @@ main {
 			float: left;
 		}
 
-		input {
-			text-align: right;
-		}
-		input, select, .value, .people {
+		.form-container, .value, .people {
 			width: 65%;
 			float: left;
 		}
@@ -87,6 +84,18 @@ main {
 			text-align: center;
 			font-size: 1.5rem;
 		}
+	}
+
+	.form-container {
+		text-align: center;
+	}
+	input {
+		width: 50%;
+		text-align: center;
+	}
+
+	select {
+		width: 35%;
 	}
 }
 

@@ -103,12 +103,24 @@ body {
 	background: $black;
 }
 
+.tax {
+	input {
+		border-bottom: 2px solid darken($primary-color, 20%);
 
-.bill, .your-total, .tip-total {
+		&:active,&:focus {
+			//box-shadow: 0 0 2px 0px $primary-color;
+			//border: 1px solid $primary-color;
+			outline: none;
+			border-bottom: 2px solid darken($primary-color, 20%);
+		}
+	}
+}
+
+.bill, .tip, .total {
 	background: darken($primary-color, 20%);
 }
 
-.split , .tip, .total {
+.split, .tax, .tip-total, .your-total {
 	background: $primary-color;
 }
 

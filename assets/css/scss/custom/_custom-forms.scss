@@ -1,7 +1,3 @@
-form {
-	margin: 0;
-}
-
 input,select,textarea {
 	margin: 0.25em 0 0;
 	width: 100%;
@@ -48,20 +44,6 @@ select {
 		cursor: default;
 	}
 }
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"] {
-	-webkit-appearance:none;	
-}
-
-input[type="search"] {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 select {
 	height: 2em;
@@ -72,88 +54,6 @@ select {
 	&:focus {
 		border-bottom: none;		
 	}
-}
-
-select[multiple="multiple"],select[multiple] {
-	height: 150px;
-}
-
-textarea {
-	height: 7em;
-	resize: vertical;
-}
-
-
-label {
-	width: 100%;
-	display: block;
-	@include heading-font-regular();
-	font-size: 1.25em;
-	margin: 0 0 0.25em 0;
-	float: left;
-}
-
-.checkbox-radio {
-	margin: 0 0 .5em 0;
-	@include body-font-regular();
-	font-size: 1em;
-	padding: 0 0 0 1em;
-	color: $white;
-	font-size: .85em;
-	input {
-		margin: 0 .5em 0 0;
-		width: auto;
-		//outline: 1px solid $primary-color;
-		border-radius: 100px;
-	}
-
-	&:hover, &:active,&:focus {
-		input {
-			//background: $primary-color;
-		}
-	}
-}
-
-.button, button {
-	background: $primary-color;
-	@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-	color: #fff;
-	padding: .5em 1em;
-	width: 100%;
-	display: block;
-	text-align: center;
-	border-radius:  $global-radius;
-	border: none;
-	margin: .5em 0;
-	@include heading-font-regular();
-	font-size: 1.25em;
-	@include double-transition(background,color, .125s);
-	text-decoration: none;
-	@extend %noselect;
-	cursor: pointer;
-	
-	&:hover, &:active,&:focus {
-		background: darken($primary-color, 10%);
-		@include linear-gradient(rgba(255,255,255,0.05), rgba(0,0,0,0.05));
-		//@include linear-gradient( darken($primary-color, 10%), darken($primary-color, 13%));
-		outline: none;
-		color: #fff;
-		border: none;
-	}
-
-}
-
-
-:invalid {
-  box-shadow: none;
-}
-
-:-moz-submit-invalid {
-  box-shadow: none;
-}
-
-:-moz-ui-invalid {
-  box-shadow:none;
 }
 
 @media #{$small-up} { }
@@ -172,4 +72,3 @@ label {
 
 @media #{$xxlarge-up} { }
 @media #{$xxlarge-only} { }
-

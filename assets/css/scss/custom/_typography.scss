@@ -14,90 +14,10 @@ h1 {
 	margin: 0em 0 .5em;
 }
 
-h2 {
-	@include heading-font-regular();
-	font-size: 1.85em;
-	line-height: 1.15em;
-}
-
-h3 {
-	@include heading-font-bold();
-	font-size: 1.625em;	
-	line-height: 1.13em;
-}
-
 h4 {
 	@include heading-font-light();
 	font-size: 1.4em;	
 	line-height: 1.11em;
-}
-
-h5 {
-	@include heading-font-regular();
-	font-size: 1.3em;	
-	line-height: 1em;
-}
-
-h6 {
-	@include heading-font-bold();
-	font-size: 1.25em;	
-	line-height: 1em;
-}
-
-p {
-	@include body-font-regular();
-	font-size: 1em;
-	line-height: 1.375em;
-	color: #262626;
-	margin: 0 0 1em;
-}
-
-blockquote {
-	@include heading-font-bold-italic();
-	font-size: 1.25em;
-	line-height: 1.25em;
-}
-
-ul,ol {
-	li {
-		@include body-font-regular();
-		font-size: 1em;
-		line-height: 1.375em;
-		color: #262626;
-		ol,ul {
-			margin: .25em 0;
-		}
-
-		li {
-			font-size: 1em;
-		}
-	}
-}
-
-ul {
-	list-style-type: square;
-}
-
-ol {
-	list-style-type: decimal;
-}
-
-a {
-	color: $primary-color;
-	text-decoration: none;
-
-	&:hover,&:active,&:focus {
-		color: darken($primary-color, 10%);
-		border-bottom: 2px solid darken($primary-color, 10%);;
-	}
-}
-
-strong {
-	@include body-font-bold();
-}
-
-em {
-	@include body-font-italic();
 }
 
 @media #{$small-up} { }
@@ -106,72 +26,11 @@ em {
 @media #{$medium-up} { }
 @media #{$medium-only} { }
 
-@media #{$large-up} { 
-
-	h1, h2, h3, h4, h5, h6 { 
-		
-	}
-
-	h1 {
-		font-size: 3em;	
-		line-height: 1.25em;
-	}
-
-	h2 {
-		font-size: 2.5em;
-		line-height: 1.25em;
-	}
-
-	h3 {
-		font-size: 2em;	
-		line-height: 1.25em;
-	}
-
-	h4 {
-		font-size: 1.75em;	
-		line-height: 1.25em;
-	}
-
-	h5 {
-		font-size: 1.5em;	
-		line-height: 1.25em;
-	}
-
-	h6 {
-		font-size: 1.45em;	
-		line-height: 1.25em;
-	}
-
-	p {
-		line-height: 1.25em;
-	}
-
-	blockquote {
-		font-size: 1.5em;
-		line-height: 1.5em;
-	}
-
-	ul,ol {
-		li {
-			line-height: 1.25em;
-		}
-	}
-
-}
+@media #{$large-up} { }
 @media #{$large-only} { }
 
-@media #{$xlarge-up} { 
-	p {
-		font-size: 1.15em;
-	}
+@media #{$xlarge-up} { }
 
-	ul,ol {
-		li {
-			font-size: 1.15em;
-		}
-	}
-
-}
 @media #{$xlarge-only} { }
 
 @media #{$xxlarge-up} { }

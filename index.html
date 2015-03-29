@@ -29,22 +29,22 @@
 </head>
 <body>
 	<main>
-		<section class="spilt">
+		<section class="split">
 			<div>
 				<h4>Split</h4>
 				<div class="people">
-					<span class="fa fa-user"></span>
-					<span class="fa fa-user"></span>
-					<span class="fa fa-user"></span>
-					<span class="fa fa-user"></span>
-					<span class="fa fa-user"></span>
+					<span data-split="5"  class="fa fa-user"></span>
+					<span data-split="4"  class="fa fa-user"></span>
+					<span data-split="3"  class="fa fa-user"></span>
+					<span data-split="2"  class="fa fa-user"></span>
+					<span data-split="1" class="fa fa-user active"></span>
 				</div>
 			</div>
 		</section>
 		<section class="bill">
 			<div>
 				<h4>Amount</h4>
-				<input pattern="\d*" name="bill-amount" type="text">
+				<input pattern="\d*" name="bill-amount" type="text" placeholder="$ 0.00">
 			</div>
 		</section>
 		<section class="tip">
@@ -83,20 +83,20 @@
 		<section class="total">
 			<div>
 				<h4>Total</h4>
-				<span class="value">$<span class="total-value">0.00</span></span>
+				<span class="value total-value">0.00</span>
 			</div>
 		</section>
 		<section class="your-total">
-			<div >
+			<div>
 				<h4>Your Total</h4>
-				<span class="value">$<span class="your-total-value">0.00</span></span>
+				<span class="value your-total-value">0.00</span>
 			</div>
 		</section>
 	</main>
 
 	<!-- js -->
 	<script src="assets/js/lib/jquery.js"></script>
-	<script async src="assets/js/lib/mask-inputs.js"></script>
+	<script async src="assets/js/lib/price-format.js"></script>
 	<script async src="assets/js/scripts/general-min.js"></script>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </body>

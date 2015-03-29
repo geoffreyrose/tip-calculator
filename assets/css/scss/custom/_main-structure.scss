@@ -1,4 +1,4 @@
-.spilt {
+.split {
 	direction: rtl;
 	text-align: center;
 	
@@ -14,13 +14,22 @@
 		margin: 0;
 
 		&:hover, &:hover ~ span {
-			color: transparent;			
+			color: transparent !important;			
 		}
 
 		&:hover:before, &:hover ~ span:before {
-	
+			color: $white !important;
+		}
+
+		&.active, &.active ~ span {
+			color: transparent;			
+		}
+
+		&.active:before, &.active ~ span:before {
 			color: $white;
 		}
+
+		
 	}
 
 }
@@ -53,7 +62,9 @@ main {
 			float: left;
 		}
 
-
+		input {
+			text-align: right;
+		}
 		input, select, .value, .people {
 			width: 65%;
 			float: left;
@@ -82,7 +93,7 @@ body {
 	background: darken($primary-color, 20%);
 }
 
-.spilt , .tip, .your-total {
+.split , .tip, .your-total {
 	background: $primary-color;
 }
 

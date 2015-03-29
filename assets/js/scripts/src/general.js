@@ -1,14 +1,4 @@
 function totalamount() {
-	$('[name="bill-amount"]').priceFormat({
-		prefix: '$ ',
-	});
-	$('.total-value').priceFormat({
-		prefix: '$ ',
-	});
-	$('.your-total-value').priceFormat({
-		prefix: '$ ',
-	});
-
 	var split = $('.split .active').attr('data-split');
 	
 	var amount = $('[name="bill-amount"]').unmask();
@@ -17,6 +7,9 @@ function totalamount() {
 	var tip = $('[name="tip"]').val();
 	tip = tip / 100;
 	tip = (tip * amount);
+
+	var tipTotal = tip / 100;
+	tipTotal = tipTotal.toFixed(0);
 
 	var total = (amount +  tip) / 100;
 	total = total.toFixed(0);
@@ -34,10 +27,26 @@ function totalamount() {
 		prefix: '$ ',
 	});
 
+	$('.total-tip').text(tipTotal);
+		$('.total-tip').priceFormat({
+		prefix: '$ ',
+	});	
+
 }
 
 $(function(){
-	totalamount();
+	$('[name="bill-amount"]').priceFormat({
+		prefix: '$ ',
+	});
+	$('.total-value').priceFormat({
+		prefix: '$ ',
+	});
+	$('.your-total-value').priceFormat({
+		prefix: '$ ',
+	});
+	$('.total-tip').priceFormat({
+		prefix: '$ ',
+	});
 
 	$('.split span').on('click', function(){
 		$('.split span').removeClass('active');

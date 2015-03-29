@@ -1,0 +1,159 @@
+@import "../foundation/components/global";
+
+$primary-color: #0092C2;
+$secondary-color: #FF4412;
+$header-color: #32353C;
+
+$alert-color: #f04124;
+$success-color: #43AC6A;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+$header-font-color: #ccc;
+$button-color: #27AC27;
+$white: #ddd;
+$gray: #ddd;
+$black: #444;
+$topBarHeight: 2.75em;
+
+$heading-fallback: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+$body-fallback: 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+
+$global-radius: 3px;
+
+@mixin single-transition($property:all, $speed:.125s, $ease:linear) {
+	-webkit-transition: $property $speed $ease;
+	-moz-transition: $property $speed $ease;
+	-o-transition: $property $speed $ease;
+	transition: $property $speed $ease;
+}
+@mixin double-transition($property:background,$property2:color, $speed:.125s, $ease:linear) {
+	-webkit-transition: $property, $property2, $speed $ease;
+	-moz-transition: $property, $property2, $speed $ease;
+	-o-transition: $property, $property2, $speed $ease;
+	transition: $property, $property2, $speed $ease;
+}
+
+@mixin heading-font-light {
+	font-family: $heading-fallback;
+	font-style: normal;
+	font-weight: 100;
+}
+@mixin heading-font-regular {
+	font-family: $heading-fallback;
+	font-style: normal;
+	font-weight: 400;
+}
+@mixin heading-font-regular-italic {
+	font-family: $heading-fallback;
+	font-style: italic;
+	font-weight: 400;
+}
+@mixin heading-font-bold {
+	font-family: $heading-fallback;
+	font-style: normal;
+	font-weight: 700;
+}
+@mixin heading-font-bold-italic {
+	font-family: $heading-fallback;
+	font-style: italic;
+	font-weight: 700;
+}
+
+
+
+@mixin body-font-regular{
+	font-family: $body-fallback;
+	font-style: normal;
+	font-weight: 400;
+}
+@mixin body-font-italic {
+	font-family: $body-fallback;
+	font-style: italic;
+	font-weight: 400;
+}
+@mixin body-font-bold {
+	font-family: $body-fallback;
+	font-style: normal;
+	font-weight: 700;
+}
+
+%noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-moz-box-flex:  $values;
+	-webkit-flex:  $values;
+	-ms-flex:  $values;
+	flex:  $values;
+}
+
+@mixin order($val) {
+	-webkit-box-ordinal-group: $val;  
+	-moz-box-ordinal-group: $val;     
+	-ms-flex-order: $val;     
+	-webkit-order: $val;  
+	order: $val;
+}
+
+@mixin flex-flow($flowvalue) {
+	-webkit-flex-flow: $flowvalue;
+	-moz-flex-flow: $flowvalue;
+	-ms-flex-flow: $flowvalue;
+	flex-flow: $flowvalue;
+}
+
+@mixin justify($justifyval) {
+	-webkit-justify-content: $justifyval;
+	-moz-justify-content: $justifyval;
+	justify-content: $justifyval;
+}
+@mixin align-self($alignself) {
+	-webkit-align-self: $alignself;
+	-moz-align-self: $alignself;
+	-ms-align-self: $alignself;
+	align-self: $alignself;
+}
+
+@mixin flex-direction($value) {
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin align-item($align) {
+	-webkit-align-items: $align;
+	-moz-align-items: $align;
+	-ms-align-items: $align;
+	align-items: $align;
+}
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify;
+	-moz-justify-content: $justify;
+	justify-content: $justify;
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); // Saf4+, Chrome
+	background-image: -webkit-linear-gradient(top, $fromColor, $toColor); // Chrome 10+, Saf5.1+, iOS 5+
+	background-image:    -moz-linear-gradient(top, $fromColor, $toColor); // FF3.6
+	background-image:     -ms-linear-gradient(top, $fromColor, $toColor); // IE10
+	background-image:      -o-linear-gradient(top, $fromColor, $toColor); // Opera 11.10+
+	background-image:         linear-gradient(top, $fromColor, $toColor);
+	//filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}

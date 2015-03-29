@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<title>Tip Calculator</title>
+	<meta name="description" content="A Calculator for Tiping">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+
+	<!-- Fav/Apple Icon -->
+	<link rel="icon" type="image/png" href="assets/img/n7.png" />
+	<link rel="apple-touch-icon-precomposed" type="image/png" href="assets/img/n7.png">
+
+	<!-- Web Fonts -->
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>		
+		<script src="/assets/js/lib/respond.js"></script>
+		<script src="/assets/js/lib/rem.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/css/iestyles.css" />
+	<![endif]-->	
+
+</head>
+<body>
+	<main>
+		<section class="spilt">
+			<div>
+				<h4>Split</h4>
+				<div class="people">
+					<span class="fa fa-user"></span>
+					<span class="fa fa-user"></span>
+					<span class="fa fa-user"></span>
+					<span class="fa fa-user"></span>
+					<span class="fa fa-user"></span>
+				</div>
+			</div>
+		</section>
+		<section class="bill">
+			<div>
+				<h4>Amount</h4>
+				<input pattern="\d*" name="bill-amount" type="text">
+			</div>
+		</section>
+		<section class="tip">
+			<div>
+				<h4>Tip</h4>
+				<select name="tip">
+					<option value="0">0%</option>
+					<option value="1">1%</option>
+					<option value="2">2%</option>
+					<option value="3">3%</option>
+					<option value="4">4%</option>
+					<option value="5">5%</option>
+					<option value="6">6%</option>
+					<option value="7">7%</option>
+					<option value="8">8%</option>
+					<option value="9">9%</option>
+					<option value="10">10%</option>
+					<option value="11">11%</option>
+					<option value="12">12%</option>
+					<option value="13">13%</option>
+					<option value="14">14%</option>
+					<option selected value="15">15%</option>
+					<option value="16">16%</option>
+					<option value="17">17%</option>
+					<option value="18">18%</option>
+					<option value="19">19%</option>
+					<option value="20">20%</option>
+					<option value="21">21%</option>
+					<option value="22">22%</option>
+					<option value="23">23%</option>
+					<option value="24">24%</option>
+					<option value="25">25%</option>
+				</select>
+			</div>
+		</section>
+		<section class="total">
+			<div>
+				<h4>Total</h4>
+				<span class="value">$<span class="total-value">0.00</span></span>
+			</div>
+		</section>
+		<section class="your-total">
+			<div >
+				<h4>Your Total</h4>
+				<span class="value">$<span class="your-total-value">0.00</span></span>
+			</div>
+		</section>
+	</main>
+
+	<!-- js -->
+	<script src="assets/js/lib/jquery.js"></script>
+	<script async src="assets/js/lib/mask-inputs.js"></script>
+	<script async src="assets/js/scripts/general-min.js"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</body>
+</html>

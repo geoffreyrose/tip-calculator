@@ -48,7 +48,7 @@ main {
 	margin: 0 auto;
 	min-height: 100%;
 	section {	
-		padding: .75em;
+		padding: .25em .75em;
 		@extend .clearfix;	
 		color: $white;
 		@include flexbox();

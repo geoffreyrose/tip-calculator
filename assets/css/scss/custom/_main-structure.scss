@@ -52,7 +52,7 @@ main {
 		@extend .clearfix;	
 		color: $white;
 		@include flexbox();
-		@include flex(1);
+		@include flex(1 0 0);
 		@include flex-direction(column);
 		@include justify(center);
 		h4 {

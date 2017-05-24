@@ -1,148 +1,147 @@
 <!doctype html>
 <html lang="en-us">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Tip Calculator</title>
 	<meta name="description" content="A Calculator for Tiping">
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-
-	<!-- Fav/Apple Icon -->
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css?v=2.0.0" />
 	<link rel="icon" type="image/png" href="assets/img/tips.png" />
 	<link rel="apple-touch-icon-precomposed" type="image/png" href="assets/img/tips.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
 
-	<!-- Web Fonts -->
-	
 	<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>		
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="/assets/js/lib/respond.js"></script>
 		<script src="/assets/js/lib/rem.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="/assets/css/iestyles.css" />
-	<![endif]-->	
-
+	<![endif]-->
 </head>
 <body>
+	<header>
+		<div class="row column">
+			<h1><span>$</span> Tip Calculator <span>$</span></h1>
+		</div>
+	</header>
 	<main>
-		<section class="heading">
-			<h1>Tip Calculator</h1>
-		</section>
-		<section class="split">
-			<div>
-				<h4>Split</h4>
-				<div class="people">
-					<span data-split="5" class="icon-user"></span>
-					<span data-split="4" class="icon-user"></span>
-					<span data-split="3" class="icon-user"></span>
-					<span data-split="2" class="icon-user"></span>
-					<span data-split="1" class="icon-user active"></span>
+		<article class="row">
+			<section class="medium-12 columns split">
+				<div class="card">
+					<h4>Split</h4>
+					<div class="people">
+						<span data-split="1" class="icon-user active"></span>
+						<span data-split="2" class="icon-user"></span>
+						<span data-split="3" class="icon-user"></span>
+						<span data-split="4" class="icon-user"></span>
+						<span data-split="5" class="icon-user"></span>
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="bill">
-			<div>
-				<h4>Amount</h4>
-				<div class="form-container">
-					<input pattern="\d*" name="bill-amount" type="text" placeholder="$ 0.00">
+			</section>
+
+			<section class="medium-12 columns bill">
+				<div class="card">
+					<h4>Amount</h4>
+					<div class="form-container">
+						<input pattern="\d*" name="bill-amount" type="text" value="$ 0.00">
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="tax">
-			<div>
-				<h4>Tax</h4>
-				<div class="form-container">
-					<input pattern="\d*" name="tax-amount" type="text" placeholder="$ 0.00">
+			</section>
+
+			<section class="medium-12 columns tax">
+				<div class="card">
+					<h4>Tax</h4>
+					<div class="form-container">
+						<input pattern="\d*" name="tax-amount" type="text" placeholder="$ 0.00">
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="tip">
-			<div>
-				<h4>Tip</h4>
-				<div class="form-container">
-					<select name="tip">
-						<option value="0">0%</option>
-						<option value="1">1%</option>
-						<option value="2">2%</option>
-						<option value="3">3%</option>
-						<option value="4">4%</option>
-						<option value="5">5%</option>
-						<option value="6">6%</option>
-						<option value="7">7%</option>
-						<option value="8">8%</option>
-						<option value="9">9%</option>
-						<option value="10">10%</option>
-						<option value="11">11%</option>
-						<option value="12">12%</option>
-						<option value="13">13%</option>
-						<option value="14">14%</option>
-						<option selected value="15">15%</option>
-						<option value="16">16%</option>
-						<option value="17">17%</option>
-						<option value="18">18%</option>
-						<option value="19">19%</option>
-						<option value="20">20%</option>
-						<option value="21">21%</option>
-						<option value="22">22%</option>
-						<option value="23">23%</option>
-						<option value="24">24%</option>
-						<option value="25">25%</option>
-						<option value="26">26%</option>
-						<option value="27">27%</option>
-						<option value="28">28%</option>
-						<option value="29">29%</option>
-						<option value="30">30%</option>
-						<option value="31">31%</option>
-						<option value="32">32%</option>
-						<option value="33">33%</option>
-						<option value="34">34%</option>
-						<option value="35">35%</option>
-						<option value="36">36%</option>
-						<option value="37">37%</option>
-						<option value="38">38%</option>
-						<option value="39">39%</option>
-						<option value="40">40%</option>
-						<option value="41">41%</option>
-						<option value="42">42%</option>
-						<option value="43">43%</option>
-						<option value="44">44%</option>
-						<option value="45">45%</option>
-						<option value="46">46%</option>
-						<option value="47">47%</option>
-						<option value="48">48%</option>
-						<option value="49">49%</option>
-						<option value="50">50%</option>
-					</select>
+			</section>
+
+			<section class="medium-12 columns tip">
+				<div class="card">
+					<h4>Tip</h4>
+					<div class="form-container">
+						<select name="tip">
+							<option value="0">0%</option>
+							<option value="1">1%</option>
+							<option value="2">2%</option>
+							<option value="3">3%</option>
+							<option value="4">4%</option>
+							<option value="5">5%</option>
+							<option value="6">6%</option>
+							<option value="7">7%</option>
+							<option value="8">8%</option>
+							<option value="9">9%</option>
+							<option value="10">10%</option>
+							<option value="11">11%</option>
+							<option value="12">12%</option>
+							<option value="13">13%</option>
+							<option value="14">14%</option>
+							<option selected value="15">15%</option>
+							<option value="16">16%</option>
+							<option value="17">17%</option>
+							<option value="18">18%</option>
+							<option value="19">19%</option>
+							<option value="20">20%</option>
+							<option value="21">21%</option>
+							<option value="22">22%</option>
+							<option value="23">23%</option>
+							<option value="24">24%</option>
+							<option value="25">25%</option>
+							<option value="26">26%</option>
+							<option value="27">27%</option>
+							<option value="28">28%</option>
+							<option value="29">29%</option>
+							<option value="30">30%</option>
+							<option value="31">31%</option>
+							<option value="32">32%</option>
+							<option value="33">33%</option>
+							<option value="34">34%</option>
+							<option value="35">35%</option>
+							<option value="36">36%</option>
+							<option value="37">37%</option>
+							<option value="38">38%</option>
+							<option value="39">39%</option>
+							<option value="40">40%</option>
+							<option value="41">41%</option>
+							<option value="42">42%</option>
+							<option value="43">43%</option>
+							<option value="44">44%</option>
+							<option value="45">45%</option>
+							<option value="46">46%</option>
+							<option value="47">47%</option>
+							<option value="48">48%</option>
+							<option value="49">49%</option>
+							<option value="50">50%</option>
+						</select>
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="tip-total">
-			<div>
-				<h4>Tip Total</h4>
-				<span class="value total-tip">0.00</span>
-			</div>
-		</section>
-		<section class="total">
-			<div>
-				<h4>Total</h4>
-				<span class="value total-value">0.00</span>
-			</div>
-		</section>
-		<section class="your-total">
-			<div>
-				<h4>Your Total</h4>
-				<span class="value your-total-value">0.00</span>
-			</div>
-		</section>
+			</section>
+			<section class="small-6 columns tip-total">
+				<div class="card text-center">
+					<h4>Tip Total</h4>
+					<span class="value total-tip">0.00</span>
+				</div>
+			</section>
+			<section class="small-6 columns total">
+				<div class="card text-center">
+					<h4>Grand Total</h4>
+					<span class="value total-value">0.00</span>
+				</div>
+			</section>
+		</article>
 	</main>
+	<footer class="your-total">
+		<div class="medium-12 columns">
+			<h4>Your Total: <span class="value your-total-value">0.00</span></h4>
+		</div>
+	</footer>
 
 	<!-- js -->
-	<script src="assets/js/lib/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script async src="assets/js/lib/price-format.js"></script>
-	<script async src="assets/js/scripts/general-min.js"></script>
+	<script async src="assets/js/scripts/general.min.js"></script>
 </body>
 </html>
